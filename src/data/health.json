@@ -1,0 +1,279 @@
+{
+  "user": {
+    "name": "Ashish",
+    "goals": {
+      "workoutFrequency": "5 days/week",
+      "focusAreas": ["Strength", "Muscle Building", "Core"],
+      "notes": "Progressive overload with compound movements"
+    }
+  },
+  "meditation": {
+    "daily": {
+      "id": "meditation_daily",
+      "name": "Daily Meditation",
+      "duration": 15,
+      "timing": "09:00",
+      "type": "Mindfulness & Breathing",
+      "steps": [
+        "Find a quiet comfortable space",
+        "Sit in comfortable position",
+        "5 min deep breathing (4-7-8 technique)",
+        "8 min mindfulness meditation",
+        "2 min gratitude practice"
+      ],
+      "notes": "Practice daily after morning routine"
+    }
+  },
+  "workouts": {
+    "shoulder_triceps_abs": {
+      "id": "shoulder_triceps_abs",
+      "name": "Shoulder + Triceps + Abs",
+      "duration": 30,
+      "timing": "09:30",
+      "focusAreas": ["Shoulders", "Triceps", "Core", "Abs"],
+      "exercises": [
+        {
+          "id": "warmup_stretch",
+          "name": "Stretching",
+          "type": "warmup",
+          "duration": 5,
+          "sets": 1,
+          "notes": "Dynamic stretching"
+        },
+        {
+          "id": "warmup_skipping",
+          "name": "Rope Skipping",
+          "type": "warmup",
+          "reps": 500,
+          "sets": 1,
+          "notes": "Continuous skipping"
+        },
+        {
+          "id": "dumbbell_press",
+          "name": "Dumbbell Press",
+          "type": "strength",
+          "sets": 3,
+          "reps": [20, 25, 30],
+          "weight": "20 lb",
+          "restTime": "60s",
+          "targetMuscle": "Shoulders"
+        },
+        {
+          "id": "lateral_raise",
+          "name": "Dumbbell Lateral Raise",
+          "type": "strength",
+          "sets": 3,
+          "reps": [10, 12, 15],
+          "weight": "20 lb",
+          "restTime": "60s",
+          "targetMuscle": "Shoulders (lateral deltoids)"
+        },
+        {
+          "id": "front_raise",
+          "name": "Dumbbell Front Raise",
+          "type": "strength",
+          "sets": 3,
+          "reps": [10, 12, 15],
+          "weight": "20 lb",
+          "restTime": "60s",
+          "targetMuscle": "Shoulders (anterior deltoids)"
+        },
+        {
+          "id": "triceps_dips",
+          "name": "Triceps Dips",
+          "type": "strength",
+          "sets": 3,
+          "reps": [30, 30, 30],
+          "weight": "Body weight",
+          "restTime": "60s",
+          "targetMuscle": "Triceps"
+        },
+        {
+          "id": "mountain_climber",
+          "name": "Mountain Climber",
+          "type": "cardio",
+          "sets": 3,
+          "reps": "25 each side",
+          "restTime": "45s",
+          "targetMuscle": "Core, Cardio"
+        },
+        {
+          "id": "plank",
+          "name": "Plank",
+          "type": "core",
+          "sets": 3,
+          "duration": "1 min",
+          "restTime": "30s",
+          "targetMuscle": "Core"
+        },
+        {
+          "id": "forearm",
+          "name": "Forearm Exercise",
+          "type": "strength",
+          "sets": 3,
+          "reps": [5, 5, 5],
+          "restTime": "45s",
+          "targetMuscle": "Forearms"
+        },
+        {
+          "id": "standing_abs",
+          "name": "Standing Abs Workout",
+          "type": "core",
+          "duration": 10,
+          "sets": 1,
+          "targetMuscle": "Abs",
+          "notes": "Follow standing abs routine"
+        }
+      ]
+    },
+    "chest_biceps_abs": {
+      "id": "chest_biceps_abs",
+      "name": "Chest + Biceps + Abs",
+      "duration": 30,
+      "timing": "09:30",
+      "focusAreas": ["Chest", "Biceps", "Core", "Abs"],
+      "exercises": [
+        {
+          "id": "warmup_stretch",
+          "name": "Stretching",
+          "type": "warmup",
+          "duration": 5,
+          "sets": 1,
+          "notes": "Dynamic stretching"
+        },
+        {
+          "id": "warmup_skipping",
+          "name": "Rope Skipping",
+          "type": "warmup",
+          "reps": 500,
+          "sets": 1,
+          "notes": "Continuous skipping"
+        },
+        {
+          "id": "incline_pushup",
+          "name": "Incline Pushup",
+          "type": "strength",
+          "sets": 3,
+          "reps": [10, 12, 15],
+          "weight": "Body weight",
+          "restTime": "60s",
+          "targetMuscle": "Upper Chest"
+        },
+        {
+          "id": "pushup",
+          "name": "Push Up",
+          "type": "strength",
+          "sets": 3,
+          "reps": [10, 12, 15],
+          "weight": "Body weight",
+          "restTime": "60s",
+          "targetMuscle": "Chest"
+        },
+        {
+          "id": "decline_pushup",
+          "name": "Decline Pushup",
+          "type": "strength",
+          "sets": 3,
+          "reps": [10, 12, 15],
+          "weight": "Body weight",
+          "restTime": "60s",
+          "targetMuscle": "Lower Chest"
+        },
+        {
+          "id": "dumbbell_curl",
+          "name": "Dumbbell Curl",
+          "type": "strength",
+          "sets": 3,
+          "reps": [10, 12, 15],
+          "weight": "20 lb",
+          "restTime": "60s",
+          "targetMuscle": "Biceps"
+        },
+        {
+          "id": "hammer_curl",
+          "name": "Hammer Curl",
+          "type": "strength",
+          "sets": 3,
+          "reps": [10, 12, 15],
+          "weight": "20 lb",
+          "restTime": "60s",
+          "targetMuscle": "Biceps, Forearms"
+        },
+        {
+          "id": "mountain_climber",
+          "name": "Mountain Climber",
+          "type": "cardio",
+          "sets": 3,
+          "reps": "25 each side",
+          "restTime": "45s",
+          "targetMuscle": "Core, Cardio"
+        },
+        {
+          "id": "plank",
+          "name": "Plank",
+          "type": "core",
+          "sets": 3,
+          "duration": "1 min",
+          "restTime": "30s",
+          "targetMuscle": "Core"
+        },
+        {
+          "id": "forearm",
+          "name": "Forearm Exercise",
+          "type": "strength",
+          "sets": 3,
+          "reps": [5, 5, 5],
+          "restTime": "45s",
+          "targetMuscle": "Forearms"
+        },
+        {
+          "id": "standing_abs",
+          "name": "Standing Abs Workout",
+          "type": "core",
+          "duration": 10,
+          "sets": 1,
+          "targetMuscle": "Abs",
+          "notes": "Follow standing abs routine"
+        }
+      ]
+    },
+    "rest_day": {
+      "id": "rest_day",
+      "name": "Rest Day",
+      "duration": 0,
+      "timing": "09:30",
+      "type": "recovery",
+      "notes": "Active recovery - light stretching or walking"
+    }
+  },
+  "weekPlan": {
+    "monday": {
+      "meditation": "meditation_daily",
+      "workout": "shoulder_triceps_abs"
+    },
+    "tuesday": {
+      "meditation": "meditation_daily",
+      "workout": "chest_biceps_abs"
+    },
+    "wednesday": {
+      "meditation": "meditation_daily",
+      "workout": "shoulder_triceps_abs"
+    },
+    "thursday": {
+      "meditation": "meditation_daily",
+      "workout": "chest_biceps_abs"
+    },
+    "friday": {
+      "meditation": "meditation_daily",
+      "workout": "shoulder_triceps_abs"
+    },
+    "saturday": {
+      "meditation": "meditation_daily",
+      "workout": "rest_day"
+    },
+    "sunday": {
+      "meditation": "meditation_daily",
+      "workout": "rest_day"
+    }
+  }
+}

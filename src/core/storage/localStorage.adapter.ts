@@ -1,17 +1,31 @@
-export class LocalStorageAdapter {
-  getItem(key: string): string | null {
+export type StorageAdapter = {
+  get<T>(key: string): T | null;
+  set<T>(key: string, value: T): void;
+};
+
+export class LocalStorageAdapter implements StorageAdapter {
+  get<T>(key: string): T | null {
     if (typeof window === "undefined") {
       return null;
     }
 
-    return window.localStorage.getItem(key);
+    const item = window.localStorage.getItem(key);
+    if (!item) {
+      return null;
+    }
+
+    try {
+      return JSON.parse(item) as T;
+    } catch {
+      return null;
+    }
   }
 
-  setItem(key: string, value: string): void {
+  set<T>(key: string, value: T): void {
     if (typeof window === "undefined") {
       return;
     }
 
-    window.localStorage.setItem(key, value);
+    window.localStorage.setItem(key, JSON.stringify(value));
   }
 }

@@ -6,293 +6,308 @@
     "monday": {
       "mode": "EXECUTION",
       "blocks": [
-        { "start": "08:00", "end": "08:15", "title": "Wake Up" },
         {
+          "id": "wake_up",
+          "start": "08:00",
+          "end": "08:15",
+          "title": "Wake Up",
+          "type": "routine",
+          "category": "core",
+          "weight": 10
+        },
+        {
+          "id": "diet_pre",
           "start": "08:15",
           "end": "08:30",
-          "title": "Pre Workout Meal (Coffee + Banana)"
+          "title": "Pre Workout Meal",
+          "type": "diet",
+          "category": "core",
+          "weight": 4
         },
-        { "start": "09:00", "end": "09:30", "title": "Meditation" },
-        { "start": "09:30", "end": "10:00", "title": "Workout" },
         {
+          "id": "meditation",
+          "start": "09:00",
+          "end": "09:30",
+          "title": "Meditation",
+          "type": "health",
+          "category": "core",
+          "weight": 15
+        },
+        {
+          "id": "workout",
+          "start": "09:30",
+          "end": "10:00",
+          "title": "Workout",
+          "type": "health",
+          "category": "core",
+          "weight": 15
+        },
+        {
+          "id": "diet_post",
           "start": "10:15",
           "end": "10:30",
-          "title": "Post Workout Meal (Eggs + Banana Shake)"
+          "title": "Post Workout Meal",
+          "type": "diet",
+          "category": "core",
+          "weight": 4
         },
-        { "start": "10:30", "end": "11:00", "title": "Get Ready" },
         {
+          "id": "get_ready",
+          "start": "10:30",
+          "end": "11:00",
+          "title": "Get Ready",
+          "type": "routine",
+          "category": "ignore",
+          "weight": 0
+        },
+        {
+          "id": "project",
           "start": "11:00",
           "end": "12:00",
-          "title": "Personal Project (Execution)"
+          "title": "Personal Project",
+          "type": "focus",
+          "category": "growth",
+          "weight": 10
         },
-        { "start": "12:00", "end": "14:00", "title": "Office Work" },
         {
+          "id": "office_1",
+          "start": "12:00",
+          "end": "14:00",
+          "title": "Office Work",
+          "type": "work",
+          "category": "ignore",
+          "weight": 0
+        },
+        {
+          "id": "diet_lunch",
           "start": "14:00",
           "end": "14:30",
-          "title": "Lunch (Oats/Dalia/Khichdi + Paneer + Dahi + Salad)"
+          "title": "Lunch",
+          "type": "diet",
+          "category": "core",
+          "weight": 4
         },
-        { "start": "14:30", "end": "15:00", "title": "Rest" },
-        { "start": "15:00", "end": "17:00", "title": "Office Work" },
         {
+          "id": "rest",
+          "start": "14:30",
+          "end": "15:00",
+          "title": "Rest",
+          "type": "rest",
+          "category": "ignore",
+          "weight": 0
+        },
+        {
+          "id": "office_2",
+          "start": "15:00",
+          "end": "17:00",
+          "title": "Office Work",
+          "type": "work",
+          "category": "ignore",
+          "weight": 0
+        },
+        {
+          "id": "diet_snack",
           "start": "17:00",
           "end": "17:30",
-          "title": "Evening Snack (Fruit + Coffee + Chana)"
+          "title": "Evening Snack",
+          "type": "diet",
+          "category": "core",
+          "weight": 4
         },
-        { "start": "17:30", "end": "20:00", "title": "Office Work" },
-        { "start": "20:00", "end": "20:15", "title": "Dinner (Eggs + Salad)" },
-        { "start": "20:15", "end": "20:45", "title": "Evening Walk" },
-        { "start": "20:45", "end": "23:00", "title": "Family / Personal Time" },
-        { "start": "23:00", "end": "00:00", "title": "Light Planning" },
-        { "start": "00:30", "end": "08:00", "title": "Sleep" }
+        {
+          "id": "office_3",
+          "start": "17:30",
+          "end": "20:00",
+          "title": "Office Work",
+          "type": "work",
+          "category": "ignore",
+          "weight": 0
+        },
+        {
+          "id": "diet_dinner",
+          "start": "20:00",
+          "end": "20:15",
+          "title": "Dinner",
+          "type": "diet",
+          "category": "core",
+          "weight": 4
+        },
+        {
+          "id": "walk",
+          "start": "20:15",
+          "end": "20:45",
+          "title": "Evening Walk",
+          "type": "health",
+          "category": "support",
+          "weight": 10
+        },
+        {
+          "id": "personal_time",
+          "start": "20:45",
+          "end": "23:00",
+          "title": "Family / Personal Time",
+          "type": "life",
+          "category": "ignore",
+          "weight": 0
+        },
+        {
+          "id": "planning",
+          "start": "23:00",
+          "end": "00:00",
+          "title": "Light Planning",
+          "type": "growth",
+          "category": "growth",
+          "weight": 5
+        },
+        {
+          "id": "sleep",
+          "start": "00:30",
+          "end": "08:00",
+          "title": "Sleep",
+          "type": "sleep",
+          "category": "support",
+          "weight": 15
+        }
       ]
     },
 
-    "tuesday": {
-      "mode": "EXECUTION",
-      "blocks": [
-        { "start": "08:00", "end": "08:15", "title": "Wake Up" },
-        {
-          "start": "08:15",
-          "end": "08:30",
-          "title": "Pre Workout Meal (Coffee + Banana)"
-        },
-        { "start": "09:00", "end": "09:30", "title": "Meditation" },
-        { "start": "09:30", "end": "10:00", "title": "Workout" },
-        {
-          "start": "10:15",
-          "end": "10:30",
-          "title": "Post Workout Meal (Eggs + Banana Shake)"
-        },
-        { "start": "10:30", "end": "11:00", "title": "Get Ready" },
-        {
-          "start": "11:00",
-          "end": "12:00",
-          "title": "Personal Project (Execution)"
-        },
-        { "start": "12:00", "end": "14:00", "title": "Office Work" },
-        {
-          "start": "14:00",
-          "end": "14:30",
-          "title": "Lunch (Oats/Dalia/Khichdi + Paneer + Dahi + Salad)"
-        },
-        { "start": "14:30", "end": "15:00", "title": "Rest" },
-        { "start": "15:00", "end": "17:00", "title": "Office Work" },
-        {
-          "start": "17:00",
-          "end": "17:30",
-          "title": "Evening Snack (Fruit + Coffee + Chana)"
-        },
-        { "start": "17:30", "end": "20:00", "title": "Office Work" },
-        { "start": "20:00", "end": "20:15", "title": "Dinner (Eggs + Salad)" },
-        { "start": "20:15", "end": "20:45", "title": "Evening Walk" },
-        { "start": "20:45", "end": "23:00", "title": "Family / Personal Time" },
-        { "start": "23:00", "end": "00:00", "title": "Light Planning" },
-        { "start": "00:30", "end": "08:00", "title": "Sleep" }
-      ]
-    },
-
-    "wednesday": {
-      "mode": "EXECUTION",
-      "blocks": [
-        { "start": "08:00", "end": "08:15", "title": "Wake Up" },
-        {
-          "start": "08:15",
-          "end": "08:30",
-          "title": "Pre Workout Meal (Coffee + Banana)"
-        },
-        { "start": "09:00", "end": "09:30", "title": "Meditation" },
-        { "start": "09:30", "end": "10:00", "title": "Workout" },
-        {
-          "start": "10:15",
-          "end": "10:30",
-          "title": "Post Workout Meal (Eggs + Banana Shake)"
-        },
-        { "start": "10:30", "end": "11:00", "title": "Get Ready" },
-        {
-          "start": "11:00",
-          "end": "12:00",
-          "title": "Personal Project (Execution)"
-        },
-        { "start": "12:00", "end": "14:00", "title": "Office Work" },
-        {
-          "start": "14:00",
-          "end": "14:30",
-          "title": "Lunch (Oats/Dalia/Khichdi + Paneer + Dahi + Salad)"
-        },
-        { "start": "14:30", "end": "15:00", "title": "Rest" },
-        { "start": "15:00", "end": "17:00", "title": "Office Work" },
-        {
-          "start": "17:00",
-          "end": "17:30",
-          "title": "Evening Snack (Fruit + Coffee + Chana)"
-        },
-        { "start": "17:30", "end": "20:00", "title": "Office Work" },
-        { "start": "20:00", "end": "20:15", "title": "Dinner (Eggs + Salad)" },
-        { "start": "20:15", "end": "20:45", "title": "Evening Walk" },
-        { "start": "20:45", "end": "23:00", "title": "Family / Personal Time" },
-        { "start": "23:00", "end": "00:00", "title": "Light Planning" },
-        { "start": "00:30", "end": "08:00", "title": "Sleep" }
-      ]
-    },
-    "thursday": {
-      "mode": "EXECUTION",
-      "blocks": [
-        { "start": "08:00", "end": "08:15", "title": "Wake Up" },
-        {
-          "start": "08:15",
-          "end": "08:30",
-          "title": "Pre Workout Meal (Coffee + Banana)"
-        },
-        { "start": "09:00", "end": "09:30", "title": "Meditation" },
-        { "start": "09:30", "end": "10:00", "title": "Workout" },
-        {
-          "start": "10:15",
-          "end": "10:30",
-          "title": "Post Workout Meal (Eggs + Banana Shake)"
-        },
-        { "start": "10:30", "end": "11:00", "title": "Get Ready" },
-        {
-          "start": "11:00",
-          "end": "12:00",
-          "title": "Personal Project (Execution)"
-        },
-        { "start": "12:00", "end": "14:00", "title": "Office Work" },
-        {
-          "start": "14:00",
-          "end": "14:30",
-          "title": "Lunch (Oats/Dalia/Khichdi + Paneer + Dahi + Salad)"
-        },
-        { "start": "14:30", "end": "15:00", "title": "Rest" },
-        { "start": "15:00", "end": "17:00", "title": "Office Work" },
-        {
-          "start": "17:00",
-          "end": "17:30",
-          "title": "Evening Snack (Fruit + Coffee + Chana)"
-        },
-        { "start": "17:30", "end": "20:00", "title": "Office Work" },
-        { "start": "20:00", "end": "20:15", "title": "Dinner (Eggs + Salad)" },
-        { "start": "20:15", "end": "20:45", "title": "Evening Walk" },
-        { "start": "20:45", "end": "23:00", "title": "Family / Personal Time" },
-        { "start": "23:00", "end": "00:00", "title": "Light Planning" },
-        { "start": "00:30", "end": "08:00", "title": "Sleep" }
-      ]
-    },
-    "friday": {
-      "mode": "EXECUTION",
-      "blocks": [
-        { "start": "08:00", "end": "08:15", "title": "Wake Up" },
-        {
-          "start": "08:15",
-          "end": "08:30",
-          "title": "Pre Workout Meal (Coffee + Banana)"
-        },
-        { "start": "09:00", "end": "09:30", "title": "Meditation" },
-        { "start": "09:30", "end": "10:00", "title": "Workout" },
-        {
-          "start": "10:15",
-          "end": "10:30",
-          "title": "Post Workout Meal (Eggs + Banana Shake)"
-        },
-        { "start": "10:30", "end": "11:00", "title": "Get Ready" },
-        {
-          "start": "11:00",
-          "end": "12:00",
-          "title": "Personal Project (Execution)"
-        },
-        { "start": "12:00", "end": "14:00", "title": "Office Work" },
-        {
-          "start": "14:00",
-          "end": "14:30",
-          "title": "Lunch (Oats/Dalia/Khichdi + Paneer + Dahi + Salad)"
-        },
-        { "start": "14:30", "end": "15:00", "title": "Rest" },
-        { "start": "15:00", "end": "17:00", "title": "Office Work" },
-        {
-          "start": "17:00",
-          "end": "17:30",
-          "title": "Evening Snack (Fruit + Coffee + Chana)"
-        },
-        { "start": "17:30", "end": "20:00", "title": "Office Work" },
-        { "start": "20:00", "end": "20:15", "title": "Dinner (Eggs + Salad)" },
-        { "start": "20:15", "end": "20:45", "title": "Evening Walk" },
-        { "start": "20:45", "end": "23:00", "title": "Family / Personal Time" },
-        { "start": "23:00", "end": "00:00", "title": "Light Planning" },
-        { "start": "00:30", "end": "08:00", "title": "Sleep" }
-      ]
-    },
+    "tuesday": { "$ref": "monday" },
+    "wednesday": { "$ref": "monday" },
+    "thursday": { "$ref": "monday" },
+    "friday": { "$ref": "monday" },
 
     "saturday": {
       "mode": "THINKING",
       "blocks": [
-        { "start": "08:00", "end": "08:15", "title": "Wake Up" },
         {
+          "id": "wake_up",
+          "start": "08:00",
+          "end": "08:15",
+          "title": "Wake Up",
+          "type": "routine",
+          "category": "core",
+          "weight": 10
+        },
+        {
+          "id": "diet_pre",
           "start": "08:15",
           "end": "08:30",
-          "title": "Pre Workout Meal (Coffee + Banana)"
+          "title": "Pre Workout Meal",
+          "type": "diet",
+          "category": "core",
+          "weight": 4
         },
-        { "start": "09:00", "end": "09:30", "title": "Meditation" },
-        { "start": "09:30", "end": "10:00", "title": "Workout" },
         {
+          "id": "meditation",
+          "start": "09:00",
+          "end": "09:30",
+          "title": "Meditation",
+          "type": "health",
+          "category": "core",
+          "weight": 15
+        },
+        {
+          "id": "workout",
+          "start": "09:30",
+          "end": "10:00",
+          "title": "Workout",
+          "type": "health",
+          "category": "core",
+          "weight": 15
+        },
+        {
+          "id": "diet_post",
           "start": "10:15",
           "end": "10:30",
-          "title": "Post Workout Meal (Eggs + Banana Shake)"
+          "title": "Post Workout Meal",
+          "type": "diet",
+          "category": "core",
+          "weight": 4
         },
-        { "start": "10:30", "end": "11:00", "title": "Get Ready" },
         {
+          "id": "thinking_1",
           "start": "11:00",
           "end": "13:00",
-          "title": "Thinking (Next Week Planning)"
+          "title": "Thinking (Next Week Planning)",
+          "type": "growth",
+          "category": "growth",
+          "weight": 5
         },
-        { "start": "13:00", "end": "13:30", "title": "Lunch" },
-        { "start": "13:30", "end": "14:30", "title": "Rest" },
-        { "start": "14:30", "end": "17:00", "title": "Thinking / Reflection" },
         {
+          "id": "diet_lunch",
+          "start": "13:00",
+          "end": "13:30",
+          "title": "Lunch",
+          "type": "diet",
+          "category": "core",
+          "weight": 4
+        },
+        {
+          "id": "rest",
+          "start": "13:30",
+          "end": "14:30",
+          "title": "Rest",
+          "type": "rest",
+          "category": "ignore",
+          "weight": 0
+        },
+        {
+          "id": "thinking_2",
+          "start": "14:30",
+          "end": "17:00",
+          "title": "Thinking / Reflection",
+          "type": "growth",
+          "category": "growth",
+          "weight": 5
+        },
+        {
+          "id": "relax",
           "start": "17:00",
           "end": "20:00",
-          "title": "Relax / Family / Social"
+          "title": "Relax / Family / Social",
+          "type": "life",
+          "category": "ignore",
+          "weight": 0
         },
-        { "start": "20:00", "end": "20:15", "title": "Dinner" },
-        { "start": "20:15", "end": "20:45", "title": "Walk" },
-        { "start": "20:45", "end": "23:30", "title": "Free Thinking / Ideas" },
-        { "start": "23:30", "end": "08:00", "title": "Sleep" }
+        {
+          "id": "diet_dinner",
+          "start": "20:00",
+          "end": "20:15",
+          "title": "Dinner",
+          "type": "diet",
+          "category": "core",
+          "weight": 4
+        },
+        {
+          "id": "walk",
+          "start": "20:15",
+          "end": "20:45",
+          "title": "Walk",
+          "type": "health",
+          "category": "support",
+          "weight": 10
+        },
+        {
+          "id": "thinking_3",
+          "start": "20:45",
+          "end": "23:30",
+          "title": "Free Thinking / Ideas",
+          "type": "growth",
+          "category": "growth",
+          "weight": 5
+        },
+        {
+          "id": "sleep",
+          "start": "23:30",
+          "end": "08:00",
+          "title": "Sleep",
+          "type": "sleep",
+          "category": "support",
+          "weight": 15
+        }
       ]
     },
 
-    "sunday": {
-      "mode": "THINKING",
-      "blocks": [
-        { "start": "08:00", "end": "08:15", "title": "Wake Up" },
-        {
-          "start": "08:15",
-          "end": "08:30",
-          "title": "Pre Workout Meal (Coffee + Banana)"
-        },
-        { "start": "09:00", "end": "09:30", "title": "Meditation" },
-        { "start": "09:30", "end": "10:00", "title": "Workout" },
-        {
-          "start": "10:15",
-          "end": "10:30",
-          "title": "Post Workout Meal (Eggs + Banana Shake)"
-        },
-        { "start": "10:30", "end": "11:00", "title": "Get Ready" },
-        {
-          "start": "11:00",
-          "end": "13:00",
-          "title": "Thinking (Next Week Planning)"
-        },
-        { "start": "13:00", "end": "13:30", "title": "Lunch" },
-        { "start": "13:30", "end": "14:30", "title": "Rest" },
-        { "start": "14:30", "end": "17:00", "title": "Thinking / Reflection" },
-        {
-          "start": "17:00",
-          "end": "20:00",
-          "title": "Relax / Family / Social"
-        },
-        { "start": "20:00", "end": "20:15", "title": "Dinner" },
-        { "start": "20:15", "end": "20:45", "title": "Walk" },
-        { "start": "20:45", "end": "23:30", "title": "Free Thinking / Ideas" },
-        { "start": "23:30", "end": "08:00", "title": "Sleep" }
-      ]
-    }
+    "sunday": { "$ref": "saturday" }
   }
 }
