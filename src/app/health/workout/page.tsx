@@ -1,13 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { healthService } from "@/modules/health/services/health.service";
 import type { DayHealth, WorkoutProgress } from "@/modules/health/domain/health.types";
 
 export default function WorkoutSessionPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
   const [dayHealth, setDayHealth] = useState<DayHealth | null>(null);
   const [workoutProgress, setWorkoutProgress] = useState<WorkoutProgress | null>(null);
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
