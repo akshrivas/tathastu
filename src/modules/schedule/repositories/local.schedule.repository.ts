@@ -1,5 +1,5 @@
 import scheduleData from "@/data/schedule.json";
-import { LocalStorageAdapter } from "@/core/storage/localStorage.adapter";
+import type { StorageAdapter } from "@/core/storage/localStorage.adapter";
 import type {
   DaySchedule,
   ScheduleStatus,
@@ -14,9 +14,10 @@ type WeeklyScheduleData = {
 };
 
 type RawDaySchedule = {
-  mode: string;
+  mode?: string;
   blocks?: RawScheduleBlock[];
   same_as?: string;
+  $ref?: string;
 };
 
 type RawScheduleBlock = {
@@ -25,10 +26,12 @@ type RawScheduleBlock = {
   start: string;
   end: string;
   type?: string;
+  category?: string;
+  weight?: number;
 };
 
 export class LocalScheduleRepository implements ScheduleRepository {
-  constructor(private readonly storage: LocalStorageAdapter) {}
+  constructor(private readonly storage: StorageAdapter) {}
 
   async getDaySchedule(day: string): Promise<DaySchedule> {
     const normalizedDay = day.toLowerCase();
@@ -41,19 +44,14 @@ export class LocalScheduleRepository implements ScheduleRepository {
 
     return {
       day: normalizedDay,
-      mode: daySchedule.mode,
+      mode: daySchedule.mode ?? "",
       blocks: this.toScheduleBlocks(daySchedule.blocks ?? []),
     };
   }
 
   async getStatus(date: string): Promise<ScheduleStatusMap> {
-    const rawStatus = this.storage.getItem(this.getStatusKey(date));
-
-    if (!rawStatus) {
-      return {};
-    }
-
-    return this.parseStatus(rawStatus);
+    const status = this.storage.get<ScheduleStatusMap>(this.getStatusKey(date));
+    return status ?? {};
   }
 
   async updateStatus(
@@ -63,13 +61,10 @@ export class LocalScheduleRepository implements ScheduleRepository {
   ): Promise<void> {
     const currentStatus = await this.getStatus(date);
 
-    this.storage.setItem(
-      this.getStatusKey(date),
-      JSON.stringify({
-        ...currentStatus,
-        [blockId]: status,
-      }),
-    );
+    this.storage.set(this.getStatusKey(date), {
+      ...currentStatus,
+      [blockId]: status,
+    });
   }
 
   private getStatusKey(date: string): string {
@@ -82,11 +77,13 @@ export class LocalScheduleRepository implements ScheduleRepository {
   ): RawDaySchedule | undefined {
     const daySchedule = weeklySchedule.week[day];
 
-    if (!daySchedule?.same_as) {
+    const referenceDay = daySchedule?.same_as ?? daySchedule?.$ref;
+
+    if (!referenceDay) {
       return daySchedule;
     }
 
-    const sourceSchedule = weeklySchedule.week[daySchedule.same_as];
+    const sourceSchedule = weeklySchedule.week[referenceDay];
 
     if (!sourceSchedule) {
       return daySchedule;
@@ -94,7 +91,7 @@ export class LocalScheduleRepository implements ScheduleRepository {
 
     return {
       ...sourceSchedule,
-      mode: daySchedule.mode,
+      mode: daySchedule.mode ?? sourceSchedule.mode,
     };
   }
 
@@ -105,6 +102,8 @@ export class LocalScheduleRepository implements ScheduleRepository {
       start: block.start,
       end: block.end,
       type: block.type,
+      category: block.category,
+      weight: block.weight,
     }));
   }
 
@@ -115,22 +114,5 @@ export class LocalScheduleRepository implements ScheduleRepository {
       .replace(/^-|-$/g, "");
 
     return `${index}-${block.start}-${block.end}-${title}`;
-  }
-
-  private parseStatus(rawStatus: string): ScheduleStatusMap {
-    try {
-      const parsed = JSON.parse(rawStatus) as Record<string, string>;
-      const status: ScheduleStatusMap = {};
-
-      Object.entries(parsed).forEach(([blockId, value]) => {
-        if (value === "done" || value === "missed") {
-          status[blockId] = value;
-        }
-      });
-
-      return status;
-    } catch {
-      return {};
-    }
   }
 }

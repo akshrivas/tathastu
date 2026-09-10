@@ -8,6 +8,8 @@ export type ScheduleBlock = {
   start: string;
   end: string;
   type?: string;
+  category?: string;
+  weight?: number;
 };
 
 export type DaySchedule = {

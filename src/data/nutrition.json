@@ -1,0 +1,176 @@
+{
+  "user": {
+    "name": "Ashish",
+    "goals": {
+      "dailyCalories": 2500,
+      "protein": 150,
+      "notes": "High protein diet for muscle building"
+    }
+  },
+  "meals": {
+    "diet_pre": {
+      "id": "diet_pre",
+      "name": "Pre Workout Meal",
+      "timing": "08:15",
+      "items": [
+        {
+          "name": "Black Coffee",
+          "quantity": "1 cup",
+          "category": "beverage"
+        },
+        {
+          "name": "Banana",
+          "quantity": "1",
+          "category": "fruit"
+        }
+      ],
+      "nutrition": {
+        "calories": 150,
+        "protein": 2,
+        "carbs": 35,
+        "fats": 0
+      },
+      "notes": "Light meal before workout"
+    },
+    "diet_post": {
+      "id": "diet_post",
+      "name": "Post Workout Meal",
+      "timing": "10:15",
+      "items": [
+        {
+          "name": "Whole Eggs",
+          "quantity": "2",
+          "category": "protein"
+        },
+        {
+          "name": "Egg Whites",
+          "quantity": "3",
+          "category": "protein"
+        },
+        {
+          "name": "Banana Shake",
+          "quantity": "1 glass",
+          "category": "beverage"
+        },
+        {
+          "name": "Almonds",
+          "quantity": "10",
+          "category": "nuts"
+        }
+      ],
+      "nutrition": {
+        "calories": 550,
+        "protein": 45,
+        "carbs": 40,
+        "fats": 20
+      },
+      "notes": "High protein post-workout recovery meal"
+    },
+    "diet_lunch": {
+      "id": "diet_lunch",
+      "name": "Lunch",
+      "timing": "14:00",
+      "items": [
+        {
+          "name": "Khichdi",
+          "quantity": "1 bowl",
+          "category": "main"
+        },
+        {
+          "name": "Paneer",
+          "quantity": "100 gm",
+          "category": "protein"
+        },
+        {
+          "name": "Curd",
+          "quantity": "1 bowl",
+          "category": "dairy"
+        },
+        {
+          "name": "Buttermilk",
+          "quantity": "1 glass",
+          "category": "beverage"
+        },
+        {
+          "name": "Salad",
+          "quantity": "1 bowl",
+          "category": "vegetables"
+        }
+      ],
+      "nutrition": {
+        "calories": 650,
+        "protein": 35,
+        "carbs": 70,
+        "fats": 20
+      },
+      "notes": "Balanced lunch with carbs and protein"
+    },
+    "diet_snack": {
+      "id": "diet_snack",
+      "name": "Evening Snack",
+      "timing": "17:00",
+      "items": [
+        {
+          "name": "Coffee",
+          "quantity": "1 cup",
+          "category": "beverage"
+        },
+        {
+          "name": "Fruits",
+          "quantity": "seasonal",
+          "category": "fruit"
+        },
+        {
+          "name": "Roasted Chana",
+          "quantity": "1 bowl",
+          "category": "snack"
+        }
+      ],
+      "nutrition": {
+        "calories": 300,
+        "protein": 12,
+        "carbs": 45,
+        "fats": 8
+      },
+      "notes": "Light evening snack with protein"
+    },
+    "diet_dinner": {
+      "id": "diet_dinner",
+      "name": "Dinner",
+      "timing": "20:00",
+      "items": [
+        {
+          "name": "Whole Eggs",
+          "quantity": "2",
+          "category": "protein"
+        },
+        {
+          "name": "Egg Whites",
+          "quantity": "3",
+          "category": "protein"
+        },
+        {
+          "name": "Salad",
+          "quantity": "1 bowl",
+          "category": "vegetables"
+        }
+      ],
+      "nutrition": {
+        "calories": 350,
+        "protein": 40,
+        "carbs": 10,
+        "fats": 18
+      },
+      "notes": "High protein, low carb dinner"
+    }
+  },
+  "weekPlan": {
+    "monday": ["diet_pre", "diet_post", "diet_lunch", "diet_snack", "diet_dinner"],
+    "tuesday": ["diet_pre", "diet_post", "diet_lunch", "diet_snack", "diet_dinner"],
+    "wednesday": ["diet_pre", "diet_post", "diet_lunch", "diet_snack", "diet_dinner"],
+    "thursday": ["diet_pre", "diet_post", "diet_lunch", "diet_snack", "diet_dinner"],
+    "friday": ["diet_pre", "diet_post", "diet_lunch", "diet_snack", "diet_dinner"],
+    "saturday": ["diet_pre", "diet_post", "diet_lunch", "diet_snack", "diet_dinner"],
+    "sunday": ["diet_pre", "diet_post", "diet_lunch", "diet_snack", "diet_dinner"]
+  }
+}
